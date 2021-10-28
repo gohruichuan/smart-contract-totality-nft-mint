@@ -68,7 +68,7 @@ contract Totality is ERC721, Ownable {
         );
 
         if(!presalerList[msg.sender]){
-            require(matchAddresSigner(hash,signature), "DIRECT_MINT_DISALLOWED");
+            require(matchAddresSigner(hashTransaction(msg.sender, tokenQuantity, nonce), signature), "DIRECT_MINT_DISALLOWED");
             presalerList[msg.sender] = true;
         }
 
