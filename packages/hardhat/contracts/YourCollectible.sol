@@ -5,12 +5,13 @@ pragma solidity >=0.6.0 <=0.8.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-
+import "@openzeppelin/contracts/cryptography/ECDSA.sol";
 //learn more: https://docs.openzeppelin.com/contracts/3.x/erc721
 
 // GET LISTED ON OPENSEA: https://testnets.opensea.io/get-listed/step-two
 
 contract Totality is ERC721, Ownable {
+    using ECDSA for bytes32;
     address payable private constant TREASURY_WALLET = 0x836D5a18960f7Ab7dCF3261248B85838475f060C;
     address private _signerAddress = 0x7e3999B106E4Ef472E569b772bF7F7647D8F26Ba;
     using Counters for Counters.Counter;
@@ -29,14 +30,14 @@ contract Totality is ERC721, Ownable {
     uint256 public constant PRICE = 0.08 ether;
     uint256 public constant LIMIT_PER_MINT = 5;
 
-    mapping(address => bool) public presalerList; // stores presale wallet addresses
-    mapping(address => uint256) public presalerListPurchases; // stores presale number of purchases
+    // mapping(address => bool) public presalerList; // stores presale wallet addresses
+    // mapping(address => uint256) public presalerListPurchases; // stores presale number of purchases
 
     uint256 public requested;
     uint256 public giftedAmountMinted;
     uint256 public publicAmountMinted;
     uint256 public privateAmountMinted;
-    uint256 public presalePurchaseLimit = 2;
+    // uint256 public presalePurchaseLimit = 2;
     bool public presaleLive;
     bool public saleLive;
     bool public locked;
@@ -46,37 +47,27 @@ contract Totality is ERC721, Ownable {
         _;
     }
 
-    function removeFromPresaleList(address[] calldata entries)
-        external
-        onlyOwner
-    {
-        for (uint256 i = 0; i < entries.length; i++) {
-            address entry = entries[i];
-            require(entry != address(0), "NULL_ADDRESS");
-            require(presalerList[entry], "PRESALER_DOESNT_EXIST");
+    // function removeFromPresaleList(address[] calldata entries)
+    //     external
+    //     onlyOwner
+    // {
+    //     for (uint256 i = 0; i < entries.length; i++) {
+    //         address entry = entries[i];
+    //         require(entry != address(0), "NULL_ADDRESS");
+    //         require(presalerList[entry], "PRESALER_DOESNT_EXIST");
 
-            presalerList[entry] = false;
-        }
-    }
+    //         presalerList[entry] = false;
+    //     }
+    // }
 
-    function presaleBuy(bytes32 hash, bytes memory signature, string memory nonce, uint256 tokenQuantity) external payable {
+    function presaleBuy(bytes calldata signature, string calldata nonce, uint256 tokenQuantity) external payable {
         require(!saleLive && presaleLive, "PRESALE_CLOSED");
-        require(totalSupply() < MAX_SUPPLY_LIMIT, "OUT_OF_STOCK");
-        require(
-            privateAmountMinted + tokenQuantity <= PRIVATE,
-            "EXCEED_PRIVATE"
-        );
-
-        if(!presalerList[msg.sender]){
-            require(matchAddresSigner(hashTransaction(msg.sender, tokenQuantity, nonce), signature), "DIRECT_MINT_DISALLOWED");
-            presalerList[msg.sender] = true;
-        }
-
-        require( presalerListPurchases[msg.sender] + tokenQuantity <= presalePurchaseLimit, "EXCEED_ALLOC" );
-        require(PRICE * tokenQuantity <= msg.value, "INSUFFICIENT_ETH");
+        // require(totalSupply() < MAX_SUPPLY_LIMIT, "OUT_OF_STOCK");
+        require( privateAmountMinted + tokenQuantity <= PRIVATE, "EXCEED_PRIVATE");
+        require( PRICE * tokenQuantity <= msg.value, "INSUFFICIENT_ETH");
+        require(matchAddresSigner(hashTransaction(msg.sender, tokenQuantity, nonce), signature), "DIRECT_MINT_DISALLOWED");
 
         privateAmountMinted += tokenQuantity;
-        presalerListPurchases[msg.sender] += tokenQuantity;
 
         for (uint256 i = 0; i < tokenQuantity; i++) {
             _safeMint(msg.sender, totalSupply() + 1);
@@ -92,7 +83,6 @@ contract Totality is ERC721, Ownable {
                 keccak256(abi.encodePacked(sender, qty, nonce))
             )
         );
-
         return hash;
     }
 
@@ -150,17 +140,17 @@ contract Totality is ERC721, Ownable {
         }
     }
 
-    function isPresaler(address addr) external view returns (bool) {
-        return presalerList[addr];
-    }
+    // function isPresaler(address addr) external view returns (bool) {
+    //     return presalerList[addr];
+    // }
 
-    function presalePurchasedCount(address addr)
-        external
-        view
-        returns (uint256)
-    {
-        return presalerListPurchases[addr];
-    }
+    // function presalePurchasedCount(address addr)
+    //     external
+    //     view
+    //     returns (uint256)
+    // {
+    //     return presalerListPurchases[addr];
+    // }
 
     // Owner functions for enabling presale, sale, revealing and setting the provenance hash
     function lockMetadata() external onlyOwner {

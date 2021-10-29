@@ -1,9 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\contracts\\YourCollectible.sol": {
-      "lastModificationDate": 1633737059978,
-      "contentHash": "69725ddcdd9b8aa4a9e977552447fde8",
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\contracts\\YourCollectible.sol": {
+      "lastModificationDate": 1635434980145,
+      "contentHash": "f1cd8a7a2c6d8a68101cf78277e303ac",
       "sourceName": "contracts/YourCollectible.sol",
       "solcConfig": {
         "version": "0.6.7",
@@ -38,7 +38,8 @@
       "imports": [
         "@openzeppelin/contracts/token/ERC721/ERC721.sol",
         "@openzeppelin/contracts/utils/Counters.sol",
-        "@openzeppelin/contracts/access/Ownable.sol"
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/cryptography/ECDSA.sol"
       ],
       "versionPragmas": [
         ">=0.6.0 <=0.8.0"
@@ -47,8 +48,8 @@
         "Totality"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol": {
-      "lastModificationDate": 1631330345907,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol": {
+      "lastModificationDate": 1630244328308,
       "contentHash": "613f953894828a7f476e811c89c59179",
       "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
       "solcConfig": {
@@ -101,8 +102,8 @@
         "ERC721"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\utils\\Counters.sol": {
-      "lastModificationDate": 1631330345877,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\utils\\Counters.sol": {
+      "lastModificationDate": 1630244327888,
       "contentHash": "5414dbd62bbfba220645349dad9685ea",
       "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
       "solcConfig": {
@@ -145,8 +146,8 @@
         "Counters"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
-      "lastModificationDate": 1631330345944,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
+      "lastModificationDate": 1630244328820,
       "contentHash": "140e80ebd07ed05e7fe907c531e6746f",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
@@ -189,8 +190,8 @@
         "Ownable"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\GSN\\Context.sol": {
-      "lastModificationDate": 1631330345875,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\GSN\\Context.sol": {
+      "lastModificationDate": 1630244327868,
       "contentHash": "af1b36323856d0d1550abc7f878a8208",
       "sourceName": "@openzeppelin/contracts/GSN/Context.sol",
       "solcConfig": {
@@ -231,8 +232,8 @@
         "Context"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721.sol": {
-      "lastModificationDate": 1631330345929,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721.sol": {
+      "lastModificationDate": 1630244328633,
       "contentHash": "471702709d00ad3e1827825c4f7ea434",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
       "solcConfig": {
@@ -275,8 +276,8 @@
         "IERC721"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Metadata.sol": {
-      "lastModificationDate": 1631330345932,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Metadata.sol": {
+      "lastModificationDate": 1630244328671,
       "contentHash": "c747635b7aafc7aaef8ff5783ed25e6b",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol",
       "solcConfig": {
@@ -319,8 +320,8 @@
         "IERC721Metadata"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Enumerable.sol": {
-      "lastModificationDate": 1631330345930,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Enumerable.sol": {
+      "lastModificationDate": 1630244328657,
       "contentHash": "e282e7d4aa6b40bfc9ee622b0f006ed5",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Enumerable.sol",
       "solcConfig": {
@@ -363,8 +364,8 @@
         "IERC721Enumerable"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Receiver.sol": {
-      "lastModificationDate": 1631330345933,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Receiver.sol": {
+      "lastModificationDate": 1630244328691,
       "contentHash": "2d2dcc9d59c7447cc1cfbc446137b700",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
       "solcConfig": {
@@ -405,8 +406,8 @@
         "IERC721Receiver"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\introspection\\ERC165.sol": {
-      "lastModificationDate": 1631330345893,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\introspection\\ERC165.sol": {
+      "lastModificationDate": 1630244328113,
       "contentHash": "cd8a4a4c1e298943d96dd5ed09ad27f3",
       "sourceName": "@openzeppelin/contracts/introspection/ERC165.sol",
       "solcConfig": {
@@ -449,8 +450,8 @@
         "ERC165"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\math\\SafeMath.sol": {
-      "lastModificationDate": 1631330345958,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\math\\SafeMath.sol": {
+      "lastModificationDate": 1630244328932,
       "contentHash": "168f50d923a8f64094d8e761ca2e5fe6",
       "sourceName": "@openzeppelin/contracts/math/SafeMath.sol",
       "solcConfig": {
@@ -491,8 +492,8 @@
         "SafeMath"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
-      "lastModificationDate": 1631330345871,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
+      "lastModificationDate": 1630244327834,
       "contentHash": "6b0498e1feb1d70edaf0ee5546e07a46",
       "sourceName": "@openzeppelin/contracts/utils/Address.sol",
       "solcConfig": {
@@ -533,8 +534,8 @@
         "Address"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\utils\\EnumerableSet.sol": {
-      "lastModificationDate": 1631330345882,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\utils\\EnumerableSet.sol": {
+      "lastModificationDate": 1630244327962,
       "contentHash": "335c4591d8f63429138e843e91156f03",
       "sourceName": "@openzeppelin/contracts/utils/EnumerableSet.sol",
       "solcConfig": {
@@ -575,8 +576,8 @@
         "EnumerableSet"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\utils\\EnumerableMap.sol": {
-      "lastModificationDate": 1631330345881,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\utils\\EnumerableMap.sol": {
+      "lastModificationDate": 1630244327930,
       "contentHash": "587bbaf85d8405a72ea86e19e796d18d",
       "sourceName": "@openzeppelin/contracts/utils/EnumerableMap.sol",
       "solcConfig": {
@@ -617,8 +618,8 @@
         "EnumerableMap"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
-      "lastModificationDate": 1631330345960,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
+      "lastModificationDate": 1630244328950,
       "contentHash": "35959f8ce36e9188c1d9b4348e125e48",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
       "solcConfig": {
@@ -659,8 +660,8 @@
         "Strings"
       ]
     },
-    "C:\\Users\\RC\\Desktop\\smart-contract-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\introspection\\IERC165.sol": {
-      "lastModificationDate": 1631330345925,
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\introspection\\IERC165.sol": {
+      "lastModificationDate": 1630244328543,
       "contentHash": "39dfa4b6cbda90995ba59378dd6d9969",
       "sourceName": "@openzeppelin/contracts/introspection/IERC165.sol",
       "solcConfig": {
@@ -699,6 +700,48 @@
       ],
       "artifacts": [
         "IERC165"
+      ]
+    },
+    "D:\\projects\\nft\\contract\\totality\\smart-contract-totality-nft-mint\\packages\\hardhat\\node_modules\\@openzeppelin\\contracts\\cryptography\\ECDSA.sol": {
+      "lastModificationDate": 1630244327906,
+      "contentHash": "de499ecd49c1c3d9b455a0551b669b14",
+      "sourceName": "@openzeppelin/contracts/cryptography/ECDSA.sol",
+      "solcConfig": {
+        "version": "0.6.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "ECDSA"
       ]
     }
   }
